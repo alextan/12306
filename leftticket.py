@@ -16,4 +16,4 @@ class leftticket_proceed:
         html = json.loads(response.read())
         for train in eval(leftticket.json_format):
             if train[config.train_no] == destination:
-                switch 
+                

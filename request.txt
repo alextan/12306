@@ -1,0 +1,2 @@
+http://0.0.0.0:8080/bookrequest?userid=67731230&seats=ydz&seats=edz&seats=swz&train_no=D2103&date=2014-06-20&from_station=YDQ&to_station=GZQ
+http://0.0.0.0:8080/leftticket?userid=67731230&seats=ydz&seats=edz&seats=swz&train_no=K221&date=2014-06-20&from_station=YDQ&to_station=GZQ

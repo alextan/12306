@@ -1,7 +1,6 @@
 import config
 import web
 import leftticket
-import json
 
 urls = (
     '/', 'index',
@@ -16,9 +15,8 @@ class index:
 
 class queryleftticket:
     def GET(self):
-        web.header('Content-Type','application/json; charset=utf-8', unique=True)
         url_data = web.input()
-        return json.dumps(leftticket.checkLeftTicket(url_data.train_no, url_data.date, url_data.from_station, url_data.to_station))
+        return checkLeftTicket(url_data.train_no, url_data.date, url_data.from_station, url_data.to_station)
 
 class bookrequest:
     def GET(self):
@@ -33,7 +31,7 @@ class bookrequest:
         key = date + train_no + from_station + to_station
         print key
         if config.queue.has_key(key):
-            config.queue[key]['users'][userid] = seats
+            config.queue[key][users][userid] = seats
         else:
             config.queue[key] = {'date':date,'train_no':train_no,'from_station':from_station,'to_station':to_station, 'users': { userid:seats }}
         return json.dumps(config.queue)

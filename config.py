@@ -1,3 +1,4 @@
+leftticket_queue = []
 seats = {
             'edz': "ze_num",
             'ydz': "zy_num",

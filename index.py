@@ -2,12 +2,27 @@ import config
 import web
 import leftticket
 import json
+import hashlib
 
 urls = (
     '/', 'index',
     '/leftticket','queryleftticket',
-    '/bookrequest','bookrequest'
+    '/bookrequest','bookrequest',
+    '/12306','wechat'
 )
+
+class wechat:
+    def GET(self):
+        url_data = web.input()
+        signature = url_data.signature
+        timestamp = url_data.timestamp
+        nonce = url_data.nonce
+        token = 'magiccode'
+        if hashlib.sha1(sort([token,timestamp,nonce])) == signature:
+            return echostr
+        else
+            return false
+
 
 class index:
     def GET(self):

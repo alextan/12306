@@ -18,9 +18,10 @@ class wechat:
         timestamp = url_data.timestamp
         nonce = url_data.nonce
         token = 'magiccode'
+        print signature, timestamp, nonce, token, 
         if hashlib.sha1(sort([token,timestamp,nonce])) == signature:
             return echostr
-        else
+        else:
             return false
 
 

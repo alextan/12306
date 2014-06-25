@@ -1,6 +1,7 @@
 import config
 import web
 import json
+import codecs
 
 urls = (
     '/', 'testbatch'
@@ -21,6 +22,8 @@ class testbatch:
             config.queue[key]['users'][userid] = seats
         else:
             config.queue[key] = {'date':date,'train_no':train_no,'from_station':from_station,'to_station':to_station, 'users': { userid:seats }}
+        with codecs.open('queue.json', 'w+', encoding='utf-8') as jsonfile:
+            json.dump(config.queue,jsonfile,indent=2, ensure_ascii=False)
         return json.dumps(config.queue)
 
 if __name__ == "__main__":

@@ -11,23 +11,26 @@ urls = (
     '/12306','wechat'
 )
 
-class wechat:
-    def GET(self):
-        url_data = web.input()
-        signature = url_data.signature
-        timestamp = url_data.timestamp
-        nonce = url_data.nonce
-        token = 'magiccode'
-        echostr = url_data.echostr
-        print signature, timestamp, nonce, token, 
-        list = [token,timestamp,nonce]
-        list.sort()
-        sha1 = hashlib.sha1()
-        map(sha1.update,list)
-        hashcode=sha1.hexdigest()
-        if hashcode == signature:
-            return echostr
+#class wechat:
+#    def GET(self):
+#        url_data = web.input()
+#        signature = url_data.signature
+#        timestamp = url_data.timestamp
+#        nonce = url_data.nonce
+#        token = 'magiccode'
+#        echostr = url_data.echostr
+#        print signature, timestamp, nonce, token, 
+#        list = [token,timestamp,nonce]
+#        list.sort()
+#        sha1 = hashlib.sha1()
+#        map(sha1.update,list)
+#        hashcode=sha1.hexdigest()
+#        if hashcode == signature:
+#            return echostr
 
+class wechat:
+    def POST(self):
+        
 
 class index:
     def GET(self):

@@ -10,4 +10,3 @@ response = requests.get(query.url, verify=False)
 html = response.json()
 train = [train for train in eval(query.json_format) if no == train[train_no]][0]
 print dict((seats[k], train[v]) for (k,v) in seats.items() if re.compile(r'\d+').match(train[v]))
-

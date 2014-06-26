@@ -13,7 +13,7 @@ class index:
 
 class wechat:
     def POST(self):
-#       print web.input()
+        print web.data()
         user_input = xmltodict.parse(web.data())
         to_user_name = user_input['xml']['ToUserName']
         from_user_name = user_input['xml']['FromUserName']

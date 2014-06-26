@@ -10,7 +10,7 @@ for (k,v) in queue.items():
     from_station = queue[k]['from_station']
     train_no = queue[k]['train_no']
     avail_seats = checkLeftTicket(train_no, date, from_station, to_station)
+    print avail_seats, type(avail_seats), len(avail_seats)
     if len(avail_seats) > 0:
         print queue[k]['users'], avail_seats
-        del queue[k]
-
+#      del queue[k]

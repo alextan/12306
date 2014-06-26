@@ -1,11 +1,44 @@
 {
+<<<<<<< HEAD
   "2014-06-29G1013YDQGZQ": {
+=======
+  "2014-06-30G6025IIQGZQ": {
+    "date": "2014-06-30", 
+    "to_station": "GZQ", 
+    "train_no": "G6025", 
+    "from_station": "IIQ", 
+    "users": {
+      "67731230": [
+        "ydz", 
+        "edz"
+      ]
+    }
+  }, 
+  "2014-06-29G1013IIQGZQ": {
+>>>>>>> a0e34c71c6fe900f683131116ac589e8c93ad2c3
     "date": "2014-06-29", 
     "to_station": "GZQ", 
     "train_no": "G1013", 
-    "from_station": "YDQ", 
+    "from_station": "IIQ", 
     "users": {
+<<<<<<< HEAD
       "67731231": [
+=======
+      "67731230": [
+        "ydz", 
+        "edz"
+      ]
+    }
+  }, 
+  "2014-06-29G6025IIQGZQ": {
+    "date": "2014-06-29", 
+    "to_station": "GZQ", 
+    "train_no": "G6025", 
+    "from_station": "IIQ", 
+    "users": {
+      "67731230": [
+        "ydz", 
+>>>>>>> a0e34c71c6fe900f683131116ac589e8c93ad2c3
         "edz"
       ]
     }

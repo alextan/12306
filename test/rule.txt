@@ -1,0 +1,184 @@
+  '今天'
+  (\xe4\xbb\x8a\xe5\xa4\xa9)
+
+     '明天'
+     (\xe6\x98\x8e\xe5\xa4\xa9)
+
+     '后天'
+     (\xe5\x90\x8e\xe5\xa4\xa9)
+
+     '下'
+     '\xe4\xb8\x8b'
+
+      '周一'
+      '\xe5\x91\xa8\xe4\xb8\x80'
+
+       '周二'
+       '\xe5\x91\xa8\xe4\xba\x8c'
+
+        '周三'
+        '\xe5\x91\xa8\xe4\xb8\x89'
+
+         '周四'
+         '\xe5\x91\xa8\xe5\x9b\x9b'
+
+          '周五'
+          '\xe5\x91\xa8\xe4\xba\x94'
+
+           '周六'
+           '\xe5\x91\xa8\xe5\x85\xad'
+
+            '周日'
+            '\xe5\x91\xa8\xe6\x97\xa5'
+
+             '星期一'
+             '\xe6\x98\x9f\xe6\x9c\x9f\xe4\xb8\x80'
+
+              '星期二'
+              '\xe6\x98\x9f\xe6\x9c\x9f\xe4\xb8\x80'
+
+              '星期三'
+              '\xe6\x98\x9f\xe6\x9c\x9f\xe4\xb8\x89'
+
+              '星期四'
+              '\xe6\x98\x9f\xe6\x9c\x9f\xe5\x9b\x9b'
+
+              '星期五'
+              '\xe6\x98\x9f\xe6\x9c\x9f\xe4\xba\x94'
+
+              '星期六'
+              '\xe6\x98\x9f\xe6\x9c\x9f\xe5\x85\xad'
+
+              '星期日'
+              '\xe6\x98\x9f\xe6\x9c\x9f\xe6\x97\xa5'
+
+              '星期天'
+              '\xe6\x98\x9f\xe6\x9c\x9f\xe5\xa4\xa9'
+
+               '月'
+               \xe6\x9c\x88
+
+                '日'
+                \xe6\x97\xa5
+
+                 '号'
+                 \xe5\x8f\xb7
+
+                  '到'
+                  \xe5\x88\xb0
+
+                   '动车'
+                   (\xe5\x8a\xa8\xe8\xbd\xa6)
+
+     '高铁'
+     (\xe9\xab\x98\xe9\x93\x81)
+
+     '火车'
+     (\xe7\x81\xab\xe8\xbd\xa6)
+
+     '二等座'
+     (\xe4\xba\x8c\xe7\xad\x89\xe5\xba\xa7)
+
+     '一等座'
+     (\xe4\xb8\x80\xe7\xad\x89\xe5\xba\xa7)
+
+     '硬座'
+     (\xe7\xa1\xac\xe5\xba\xa7)
+
+     '硬卧'
+     (\xe7\xa1\xac\xe5\x8d\xa7)
+
+     '卧票'
+     (\xe5\x8d\xa7\xe7\xa5\xa8)
+
+     '坐票'
+     (\xe5\x9d\x90\xe7\xa5\xa8)
+
+    req = '7月15日广州到深圳'
+    req2 = '15 广州到深圳'
+    req5 = '15号广州到深圳'
+    req3 = '7月15日广州到深圳二等座'
+    req4 = '7月15日广州南到深圳北高铁动车一等座二等座'
+    req5 = '7 15 广州南 深圳北 高铁 动车 一等座 二等座'
+    req6 = '明天广州南 深圳北 高铁 动车 一等座 二等座'
+    req7 = '下周一广州南 深圳北 高铁 动车 一等座 二等座'
+    req7 = '周一广州南 深圳北 高铁 动车 一等座 二等座'
+
+
+    weeks_uni = ['\xe5\x91\xa8\xe4\xb8\x80',                #'周一'
+                 '\xe5\x91\xa8\xe4\xba\x8c',                #'周二'
+                    '\xe5\x91\xa8\xe4\xb8\x89',                #'周三'
+                                         '\xe5\x91\xa8\xe5\x9b\x9b',                #'周四'
+                                                     '\xe5\x91\xa8\xe4\xba\x94',                #'周五'
+                                                                 '\xe5\x91\xa8\xe5\x85\xad',                #'周六'
+                                                                             '\xe5\x91\xa8\xe6\x97\xa5',                #'周日'
+                                                                                         '\xe6\x98\x9f\xe6\x9c\x9f\xe4\xb8\x80',    #'星期一'
+                                                                                                     '\xe6\x98\x9f\xe6\x9c\x9f\xe4\xb8\x80',    #'星期二'
+                                                                                                                 '\xe6\x98\x9f\xe6\x9c\x9f\xe4\xb8\x89',    #'星期三'
+                                                                                                                             '\xe6\x98\x9f\xe6\x9c\x9f\xe5\x9b\x9b',    #'星期四'
+                                                                                                                                         '\xe6\x98\x9f\xe6\x9c\x9f\xe4\xba\x94',    #'星期五'
+                                                                                                                                                     '\xe6\x98\x9f\xe6\x9c\x9f\xe5\x85\xad',    #'星期六'
+                                                                                                                                                                 '\xe6\x98\x9f\xe6\x9c\x9f\xe6\x97\xa5',    #'星期日'
+                                                                                                                                                                             '\xe6\x98\x9f\xe6\x9c\x9f\xe5\xa4\xa9'     #'星期天'
+                                                                                                                                                                                        ]
+                                                                                                                                                                                        weekday = [
+                                                                                                                                                                                                    '周一',
+                                                                                                                                                                                                                '周二',
+                                                                                                                                                                                                                            '周三',
+                                                                                                                                                                                                                                        '周四',
+                                                                                                                                                                                                                                                    '周五',
+                                                                                                                                                                                                                                                                '周六',
+                                                                                                                                                                                                                                                                            '周日',
+                                                                                                                                                                                                                                                                                        '星期一',
+                                                                                                                                                                                                                                                                                                    '星期二',
+                                                                                                                                                                                                                                                                                                                '星期三',
+                                                                                                                                                                                                                                                                                                                            '星期四',
+                                                                                                                                                                                                                                                                                                                                        '星期五',
+                                                                                                                                                                                                                                                                                                                                                    '星期六',
+                                                                                                                                                                                                                                                                                                                                                                '星期日',
+                                                                                                                                                                                                                                                                                                                                                                            '星期天'
+                                                                                                                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                    
+#week
+
+                                                                                                                                                                                                                                                                                                                                                                                        week_findall =  '((\xe4\xb8\x8b)*(' + '|'.join('('+ w +')' for w in weekday) + '))*'
+
+                                                                                                                                                                                                                                                                                                                                                                                        print re.findall(week_findall,req7)
+    [x for y in re.findall(week_findall,req7) for x in y if x!='']
+
+#day
+    day_findall = '(\xe4\xbb\x8a\xe5\xa4\xa9)|(\xe6\x98\x8e\xe5\xa4\xa9)|(\xe5\x90\x8e\xe5\xa4\xa9)'
+    print re.findall(day_findall,req6)
+    [x for y in re.findall(day_findall,req6) for x in y if x!='']
+
+#date
+    date_findall = '(\d+)(?=(?:\xe6\x9c\x88)|(?:\xe6\x97\xa5)|(?:\xe5\x8f\xb7)|[ ])'
+    print re.findall(date_findall,req6)
+
+#tickettype
+    tickettype_findall = '(\xe4\xba\x8c\xe7\xad\x89\xe5\xba\xa7)|(\xe4\xb8\x80\xe7\xad\x89\xe5\xba\xa7)|(\xe7\xa1\xac\xe5\xba\xa7)|(\xe7\xa1\xac\xe5\x8d\xa7)|(\xe5\x8d\xa7\xe7\xa5\xa8)|(\xe5\x9d\x90\xe7\xa5\xa8)'
+    print re.findall(tickettype_findall,req4)
+    [x for y in re.findall(tickettype_findall,req4) for x in y if x!='']
+
+#traintype
+    traintype_findall = '(\xe5\x8a\xa8\xe8\xbd\xa6)|(\xe9\xab\x98\xe9\x93\x81)|(\xe7\x81\xab\xe8\xbd\xa6)'
+    print re.findall(traintype_findall,req4)
+    [x for y in re.findall(traintype_findall,req4) for x in y if x!='']
+
+#station
+    date_sub= '(\d+(\xe6\x9c\x88)*)(\d+(\xe6\x97\xa5)|(\xe5\x8f\xb7)|[ ])'
+    rst = re.sub(date_sub,'',req5)
+    rst = re.sub(tickettype_findall,'',rst)
+    rst = re.sub(traintype_findall,'',rst)
+    print rst
+
+    station_findall = '([\x80-\xff]{6,})(?:(?:\xe5\x88\xb0)|[ ])([\x80-\xff]{6,})'
+    print re.findall(station_findall,rst)[0][0]
+    print re.findall(station_findall,rst)[0][1]
+
+
